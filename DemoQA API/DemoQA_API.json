@@ -1,0 +1,328 @@
+{
+	"info": {
+		"_postman_id": "0c523386-b7bf-444e-a4cb-46666dc33442",
+		"name": "DemoQA API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "Create User",
+					"id": "a1ec12a7-a20d-4e49-8f6a-88c76ae50b1a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"NewUser3\",\r\n  \"password\": \"NewUser123123!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseURL}}Account/v1/User"
+					},
+					"response": []
+				},
+				{
+					"name": "Generate token",
+					"id": "d66d6558-2ad0-4811-a745-311efbe5b60a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"NewUser3\",\r\n    \"password\": \"NewUser123123!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseURL}}Account/v1/GenerateToken"
+					},
+					"response": []
+				},
+				{
+					"name": "User Authorized",
+					"id": "b95d006c-05c8-486b-b714-02c82b961073",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"NewUser3\",\r\n    \"password\": \"NewUser123123!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseURL}}Account/v1/Authorized"
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "37f946ca-deaf-438a-8fce-c3f5dc9a747a",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "94690920-3e46-46b1-8e1b-bd899dc5add5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6Ik5ld1VzZXIzIiwicGFzc3dvcmQiOiJOZXdVc2VyMTIzMTIzISIsImlhdCI6MTY5ODI1MTI3Mn0.6bqp4o5Tttb3VWwfXA5se3CVKUBi4XNyQatQ9c7-bpc"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseURL}}Account/v1/User/{{userID}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"id": "f810937b-905d-4a55-a188-5776a5d424d8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6Ik5ld1VzZXIzIiwicGFzc3dvcmQiOiJOZXdVc2VyMTIzMTIzISIsImlhdCI6MTY5ODI0OTczNH0.9tn2Y41T-KQ6TeA-3Q9QRJHpFxXSWK6BOTCQl5s8TgI"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{BaseURL}}Account/v1/User/{{userID}}"
+					},
+					"response": []
+				}
+			],
+			"id": "d7025a16-7c60-431e-811c-8933eece9fde"
+		},
+		{
+			"name": "Book Store",
+			"item": [
+				{
+					"name": "Get List Of Books",
+					"id": "41487845-bf6b-4071-8239-dd3a667a684f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6Ik5ld1VzZXIzIiwicGFzc3dvcmQiOiJOZXdVc2VyMTIzMTIzISIsImlhdCI6MTY5ODI1MTI3Mn0.6bqp4o5Tttb3VWwfXA5se3CVKUBi4XNyQatQ9c7-bpc"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseURL}}BookStore/v1/Books"
+					},
+					"response": []
+				},
+				{
+					"name": "Add List Of Books",
+					"id": "ae294b05-0147-43b2-b92e-3bcb9bd03d4f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6Ik5ld1VzZXIzIiwicGFzc3dvcmQiOiJOZXdVc2VyMTIzMTIzISIsImlhdCI6MTY5ODI1MTI3Mn0.6bqp4o5Tttb3VWwfXA5se3CVKUBi4XNyQatQ9c7-bpc"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"5d0f6fea-eec2-4b5a-a725-9e297c1185c8\",\r\n    \"collectionOfIsbns\": [\r\n        {\r\n            \"isbn\": \"9781449325862\"\r\n        },\r\n        {\r\n            \"isbn\": \"9781449331818\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseURL}}BookStore/v1/Books"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Book",
+					"id": "b3167f47-18fa-49c2-816e-6825d2cca832",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6Ik5ld1VzZXIzIiwicGFzc3dvcmQiOiJOZXdVc2VyMTIzMTIzISIsImlhdCI6MTY5ODI1MTI3Mn0.6bqp4o5Tttb3VWwfXA5se3CVKUBi4XNyQatQ9c7-bpc"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}BookStore/v1/Book?ISBN=9781449325862",
+							"host": [
+								"{{BaseURL}}BookStore"
+							],
+							"path": [
+								"v1",
+								"Book"
+							],
+							"query": [
+								{
+									"key": "ISBN",
+									"value": "9781449325862",
+									"description": "9781449325862"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Replace Book",
+					"id": "1ed7a7b1-8845-4b65-97ca-09a3dd283356",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6Ik5ld1VzZXIzIiwicGFzc3dvcmQiOiJOZXdVc2VyMTIzMTIzISIsImlhdCI6MTY5ODI1MTI3Mn0.6bqp4o5Tttb3VWwfXA5se3CVKUBi4XNyQatQ9c7-bpc"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"5d0f6fea-eec2-4b5a-a725-9e297c1185c8\",\r\n  \"isbn\": \"9781593277574\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}BookStore/v1/Books/9781449325862",
+							"host": [
+								"{{BaseURL}}BookStore"
+							],
+							"path": [
+								"v1",
+								"Books",
+								"9781449325862"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"type": "text",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Book",
+					"id": "4ebcb920-730b-41e5-8af0-489dcaedff16",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6Ik5ld1VzZXIzIiwicGFzc3dvcmQiOiJOZXdVc2VyMTIzMTIzISIsImlhdCI6MTY5ODI1MTI3Mn0.6bqp4o5Tttb3VWwfXA5se3CVKUBi4XNyQatQ9c7-bpc"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"isbn\": \"9781449331818\",\r\n  \"userId\": \"5d0f6fea-eec2-4b5a-a725-9e297c1185c8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseURL}}BookStore/v1/Book"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Books",
+					"id": "587a5ffe-976a-4179-97fc-1439882ff6fa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6Ik5ld1VzZXIzIiwicGFzc3dvcmQiOiJOZXdVc2VyMTIzMTIzISIsImlhdCI6MTY5ODI1MTI3Mn0.6bqp4o5Tttb3VWwfXA5se3CVKUBi4XNyQatQ9c7-bpc"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}BookStore/v1/Books?UserId=5d0f6fea-eec2-4b5a-a725-9e297c1185c8",
+							"host": [
+								"{{BaseURL}}BookStore"
+							],
+							"path": [
+								"v1",
+								"Books"
+							],
+							"query": [
+								{
+									"key": "UserId",
+									"value": "5d0f6fea-eec2-4b5a-a725-9e297c1185c8",
+									"description": "5d0f6fea-eec2-4b5a-a725-9e297c1185c8"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "94112571-0e6f-43c9-88fc-ea8506b2bba8"
+		}
+	]
+}
