@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "39cb4b72-57ce-4405-b388-67db05b806d0",
+		"name": "Pet Store Pet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Pet Dog Patron",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "30244004-7704-40c0-8b9a-65c1fe6dedcc",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "84762950-5514-45b0-8f03-dba2f07a71a7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"Patron\"\r\n  },\r\n  \"name\": \"Dog\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{BaseUrl}}pet"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Pat Cat Stepan",
+			"id": "1561e255-5234-4b83-9ae5-bfefb4102963",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 0,\r\n    \"category\": {\r\n        \"id\": 0,\r\n        \"name\": \"Stepan\"\r\n    },\r\n    \"name\": \"Cat\",\r\n    \"photoUrls\": [\r\n        \"string\"\r\n    ],\r\n    \"tags\": [\r\n        {\r\n            \"id\": 0,\r\n            \"name\": \"string\"\r\n        }\r\n    ],\r\n    \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{BaseUrl}}pet"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Pet Dog Patron",
+			"id": "29df1c55-bcc9-495e-bdec-c13da2a88165",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 9222968140497184463,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"PatronTheFirst\"\r\n  },\r\n  \"name\": \"doggie\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{BaseUrl}}pet"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Pet Cat Stepan",
+			"id": "351189c9-f7ad-469f-a86f-9b3d27b0b263",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 9222968140497184425,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"StepanTheSecond\"\r\n  },\r\n  \"name\": \"doggie\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{BaseUrl}}pet"
+			},
+			"response": []
+		},
+		{
+			"name": "Find Pets By Status Available",
+			"id": "49c564d6-baa6-4fbe-903f-13cf1f188012",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}pet/findByStatus?status=available",
+					"host": [
+						"{{BaseUrl}}pet"
+					],
+					"path": [
+						"findByStatus"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "available"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Pets By Status Sold",
+			"id": "8fe91115-47ba-4bab-834b-be7f4410da57",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}pet/findByStatus?status=sold",
+					"host": [
+						"{{BaseUrl}}pet"
+					],
+					"path": [
+						"findByStatus"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "sold"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Pet By ID",
+			"id": "650706e6-591a-4153-8341-f9a52143c34a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{BaseUrl}}pet/{{petId}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Pet",
+			"id": "44ea9acd-8c43-4d9c-b70e-cf0f8dd29fdd",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{BaseUrl}}pet/{{petId}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Update pet",
+			"id": "17b2cadf-882e-4734-ad10-b2d0346e48bf",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}pet/{{petId}}?name=Banana&status=Pending",
+					"host": [
+						"{{BaseUrl}}pet"
+					],
+					"path": [
+						"{{petId}}"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Banana",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "Pending",
+							"type": "text"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
