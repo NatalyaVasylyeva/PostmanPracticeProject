@@ -1,2 +1,2 @@
-# Postman-Practice-GoIT
-Postman Practice GoIT
+# Postman-Practice
+Postman Practice
