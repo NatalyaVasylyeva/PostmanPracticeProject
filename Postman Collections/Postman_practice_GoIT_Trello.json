@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "1cbb1d84-1ab4-4414-b975-66a4982f46c3",
+		"name": "TrelloCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllBoards",
+			"id": "34ac3bdb-a93e-4c36-a669-8183e1056be3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/1/members/me/boards?key={{myKey}}&token={{myToken}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"1",
+						"members",
+						"me",
+						"boards"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{myKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{myToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBoardByID",
+			"id": "22bbb083-8653-4a97-984c-c33f68e5c332",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/1/boards/6441721eebb2162081dac6a8?key={{myKey}}&token={{myToken}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"1",
+						"boards",
+						"6441721eebb2162081dac6a8"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{myKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{myToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateBoard",
+			"id": "3215f3e5-6b40-401e-b115-92c97bfdc9aa",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/1/boards/?name=GoITBoard2004&key={{myKey}}&token={{myToken}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"1",
+						"boards",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "GoITBoard2004"
+						},
+						{
+							"key": "key",
+							"value": "{{myKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{myToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllBoards2",
+			"id": "26d693ae-ddd2-4bb2-a50d-df0e70bb2309",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/1/members/me/boards?key={{myKey}}&token={{myToken}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"1",
+						"members",
+						"me",
+						"boards"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{myKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{myToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "92258cc5-283a-47ff-8735-6f0e82896f6a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "04e3a482-f379-49e6-88cf-b8b6a6fe9329",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "myKey",
+			"value": "ed554ca814b7dce0f8178ae8e2f3eb35",
+			"type": "string"
+		},
+		{
+			"key": "myToken",
+			"value": "ATTA091e545ecd85b4133404b72f2c110e521ab09acfdc87557cfb0c89c56dd31974785C87D0",
+			"type": "string"
+		}
+	]
+}
