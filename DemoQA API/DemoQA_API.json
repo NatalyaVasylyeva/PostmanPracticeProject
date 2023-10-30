@@ -19,7 +19,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"userName\": \"NewUser3\",\r\n  \"password\": \"NewUser123123!\"\r\n}",
+							"raw": "{\r\n  \"userName\": \"NewUser4\",\r\n  \"password\": \"NewUser123123!\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -96,7 +96,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6Ik5ld1VzZXIzIiwicGFzc3dvcmQiOiJOZXdVc2VyMTIzMTIzISIsImlhdCI6MTY5ODI1MTI3Mn0.6bqp4o5Tttb3VWwfXA5se3CVKUBi4XNyQatQ9c7-bpc"
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6Ik5ld1VzZXI0IiwicGFzc3dvcmQiOiJOZXdVc2VyMTIzMTIzISIsImlhdCI6MTY5ODY5MTMxM30.7muL_ZYh-74W6nNcc_gTJtprxX7vM7j8ViXpoNXu9MU"
 							}
 						},
 						"method": "GET",
@@ -115,7 +115,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6Ik5ld1VzZXIzIiwicGFzc3dvcmQiOiJOZXdVc2VyMTIzMTIzISIsImlhdCI6MTY5ODI0OTczNH0.9tn2Y41T-KQ6TeA-3Q9QRJHpFxXSWK6BOTCQl5s8TgI"
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6Ik5ld1VzZXI0IiwicGFzc3dvcmQiOiJOZXdVc2VyMTIzMTIzISIsImlhdCI6MTY5ODY5MTMxM30.7muL_ZYh-74W6nNcc_gTJtprxX7vM7j8ViXpoNXu9MU"
 							}
 						},
 						"method": "DELETE",
